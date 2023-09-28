@@ -1,0 +1,28 @@
+/*********************BLOC TOP******************/
+.bloc-main1 {
+    width: auto;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.main-pic {
+    width: auto;
+    height: 250px;
+    overflow: hidden;
+}
+
+.bloc-maintxt {
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bloc-title {
+    width: 100%;
+}
+
+.bloc-subtitle {
+    width: 100%;
+}
