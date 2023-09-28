@@ -1,26 +1,49 @@
 /*********************BLOC TOP******************/
+
 .bloc-main1 {
     width: auto;
     height: 250px;
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    transition: 2s;
 }
 
 .main-pic {
     width: auto;
     height: 250px;
     overflow: hidden;
+    transition: 2s;
 }
 
 .bloc-maintxt {
     width: auto;
     margin: 0px;
     padding: 0px;
+    transition: 1s;
 }
 
 .bloc-title {
     width: 100%;
+    transition: 1s;
+}
+
+.bloc-title h2 {
+    transition: 1s;
+}
+
+.bloc-title:hover {
+    letter-spacing: 7px;
+    transition: 1s;
+}
+
+.bjr-title {
+    transition: 4s;
+}
+
+.bjr-title:hover {
+    transform: rotate(360deg);
+    transition: 5s;
 }
 
 .bloc-subtitle {
