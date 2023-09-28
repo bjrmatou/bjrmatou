@@ -2,7 +2,7 @@
 
 .bloc-main1 {
     width: auto;
-    height: 250px;
+    height: 230px;
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -11,7 +11,7 @@
 
 .main-pic {
     width: auto;
-    height: 250px;
+    height: 230px;
     overflow: hidden;
     transition: 2s;
 }
@@ -29,13 +29,14 @@
 }
 
 .bloc-title h2 {
-    transition: 1s;
+    transition: 2s;
 }
 
 .bloc-title:hover {
     letter-spacing: 7px;
     transition: 1s;
 }
+
 
 .bjr-title {
     transition: 4s;
@@ -48,4 +49,28 @@
 
 .bloc-subtitle {
     width: 100%;
+}
+
+
+/****************TEXTE DEFILANT*****************/
+
+@keyframes defilement2 {
+    0% { margin-left: 100%; }
+    100% { margin-left: -100%; }
+  }
+
+.messagedefilant div span,
+.messagedefilant div:after {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  white-space: nowrap;
+  top:0;
+}
+
+.messagedefilant div:after {
+  position: absolute;
+  top:0; left:0;
+  content:attr(data-text);
+  animation: defilement2 10s infinite linear;
 }
