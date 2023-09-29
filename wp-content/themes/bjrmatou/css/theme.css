@@ -39,7 +39,7 @@
 
 
 .bjr-title {
-    transition: 4s;
+    transition: 3s;
 }
 
 .bjr-title:hover {
@@ -54,16 +54,17 @@
 
 /****************TEXTE DEFILANT*****************/
 
-@keyframes defilement2 {
-    0% { margin-left: 100%; }
-    100% { margin-left: -100%; }
+@keyframes defilement {
+    0% { margin-left: 105%; }
+    100% { margin-left: -105%; }
   }
 
 .messagedefilant div span,
 .messagedefilant div:after {
   position: relative;
   display: inline-block;
-  font-size: 2rem;
+  font-size: 30px;
+  letter-spacing: 2px;
   white-space: nowrap;
   top:0;
 }
@@ -72,5 +73,5 @@
   position: absolute;
   top:0; left:0;
   content:attr(data-text);
-  animation: defilement2 10s infinite linear;
+  animation: defilement 30s infinite linear;
 }
