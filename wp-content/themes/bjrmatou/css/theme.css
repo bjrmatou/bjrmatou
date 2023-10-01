@@ -76,12 +76,8 @@
   /* le bloc défilant */
 .marquee-rtl > :first-child {
     display: inline-block;                /* modèle de boîte en ligne */
-    padding-right: 0px;                   /* un peu d'espace pour la transition */
+    padding-right: 100%;                   /* un peu d'espace pour la transition */
     padding-left: 100%;                   /* placement à droite du conteneur */
     white-space: nowrap;                  /* pas de passage à la ligne */
     animation: defilement-rtl 30s infinite linear;
   }
-
-
-
-
