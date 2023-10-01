@@ -1,0 +1,87 @@
+::-webkit-scrollbar {
+    display: none;
+    }
+
+/***********************BLOC HAUT*************************/
+
+.bloc-main1 {
+    width: auto;
+    height: 230px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    transition: 2s;
+}
+
+.main-pic {
+    width: auto;
+    height: 230px;
+    object-fit: cover;
+    overflow: hidden;
+    transition: 2s;
+}
+
+.bloc-maintxt {
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+    transition: 1s;
+}
+
+.bloc-title {
+    width: 100%;
+    transition: 1s;
+}
+
+.bloc-title h2 {
+    transition: 2s;
+}
+
+.bjr-title {
+    transition: 3s;
+}
+
+.bloc-title:hover {
+    letter-spacing: 7px;
+    transition: 1s;
+}
+
+.bloc-title:hover > .bjr-title {
+    transform: rotate(360deg);
+    transition: 5s;
+}
+
+.bloc-subtitle {
+    width: 100%;
+}
+
+
+
+/**************TEXTE DEFILANT*********************/
+
+@keyframes defilement-rtl {
+    0% {
+      transform: translate3d(0,0,0);      /* position initiale à droite */
+    }
+    100% {
+      transform: translate3d(-100%,0,0);  /* position finale à gauche */
+    }
+  }
+
+
+/* le block conteneur */
+.marquee-rtl {
+    max-width: 100%;                      /* largeur de la fenêtre */
+    margin: 0px;
+    border: none;
+    overflow: hidden;                     /* masque tout ce qui dépasse */ 
+  }
+
+  /* le bloc défilant */
+.marquee-rtl > :first-child {
+    display: inline-block;                /* modèle de boîte en ligne */
+    padding-right: 0px;                   /* un peu d'espace pour la transition */
+    padding-left: 100%;                   /* placement à droite du conteneur */
+    white-space: nowrap;                  /* pas de passage à la ligne */
+    animation: defilement-rtl 30s infinite linear;
+  }
