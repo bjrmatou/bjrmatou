@@ -1,4 +1,7 @@
-/*********************BLOC TOP******************/
+::-webkit-scrollbar {
+    display: none;
+    }
+
 
 .bloc-main1 {
     width: auto;
@@ -12,6 +15,7 @@
 .main-pic {
     width: auto;
     height: 230px;
+    object-fit: cover;
     overflow: hidden;
     transition: 2s;
 }
@@ -32,17 +36,16 @@
     transition: 2s;
 }
 
+.bjr-title {
+    transition: 3s;
+}
+
 .bloc-title:hover {
     letter-spacing: 7px;
     transition: 1s;
 }
 
-
-.bjr-title {
-    transition: 3s;
-}
-
-.bjr-title:hover {
+.bloc-title:hover > .bjr-title {
     transform: rotate(360deg);
     transition: 5s;
 }
@@ -51,27 +54,31 @@
     width: 100%;
 }
 
+/**************TEXTE DEFILANT*********************/
 
-/****************TEXTE DEFILANT*****************/
-
-@keyframes defilement {
-    0% { margin-left: 105%; }
-    100% { margin-left: -105%; }
+@keyframes defilement-rtl {
+    0% {
+      transform: translate3d(0,0,0);      /* position initiale à droite */
+    }
+    100% {
+      transform: translate3d(-100%,0,0);  /* position finale à gauche */
+    }
   }
 
-.messagedefilant div span,
-.messagedefilant div:after {
-  position: relative;
-  display: inline-block;
-  font-size: 30px;
-  letter-spacing: 2px;
-  white-space: nowrap;
-  top:0;
-}
 
-.messagedefilant div:after {
-  position: absolute;
-  top:0; left:0;
-  content:attr(data-text);
-  animation: defilement 30s infinite linear;
-}
+/* le block conteneur */
+.marquee-rtl {
+    max-width: 100%;                      /* largeur de la fenêtre */
+    margin: 0px;
+    border: none;
+    overflow: hidden;                     /* masque tout ce qui dépasse */ 
+  }
+
+  /* le bloc défilant */
+.marquee-rtl > :first-child {
+    display: inline-block;                /* modèle de boîte en ligne */
+    padding-right: 0px;                   /* un peu d'espace pour la transition */
+    padding-left: 100%;                   /* placement à droite du conteneur */
+    white-space: nowrap;                  /* pas de passage à la ligne */
+    animation: defilement-rtl 30s infinite linear;
+  }
